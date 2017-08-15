@@ -1,0 +1,815 @@
+Renesas Optimizing Linker (W2.06.00 )             14-Aug-2017 09:51:18
+
+*** Options ***
+
+-subcommand=LinkerSubCommand.tmp
+-input="./src/OLED/OLED.obj"
+-input="./src/PID_control/PID_control.obj"
+-input="./src/camera/camera.obj"
+-input="./src/cg_src/r_cg_cgc.obj"
+-input="./src/cg_src/r_cg_cgc_user.obj"
+-input="./src/cg_src/r_cg_cmt.obj"
+-input="./src/cg_src/r_cg_cmt_user.obj"
+-input="./src/cg_src/r_cg_dbsct.obj"
+-input="./src/cg_src/r_cg_hardware_setup.obj"
+-input="./src/cg_src/r_cg_icu.obj"
+-input="./src/cg_src/r_cg_icu_user.obj"
+-input="./src/cg_src/r_cg_intprg.obj"
+-input="./src/cg_src/r_cg_main.obj"
+-input="./src/cg_src/r_cg_mtu3.obj"
+-input="./src/cg_src/r_cg_mtu3_user.obj"
+-input="./src/cg_src/r_cg_port.obj"
+-input="./src/cg_src/r_cg_port_user.obj"
+-input="./src/cg_src/r_cg_resetprg.obj"
+-input="./src/cg_src/r_cg_rspi.obj"
+-input="./src/cg_src/r_cg_rspi_user.obj"
+-input="./src/cg_src/r_cg_sbrk.obj"
+-input="./src/cg_src/r_cg_sci.obj"
+-input="./src/cg_src/r_cg_sci_user.obj"
+-input="./src/cg_src/r_cg_vecttbl.obj"
+-input="./src/delay/delay.obj"
+-input="./src/matrix_key/matrix_key.obj"
+-input="./src/mavlink_receive/mavlink_receive.obj"
+-input="./src/mission_ctl/mission_ctl.obj"
+-input="./src/ppm_encoder/ppm_encoder.obj"
+-input="./src/remote_ctl/remote_ctl.obj"
+-input="./src/sonar/sonar.obj"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,PIntPRG,P/0FFFE0000,EXCEPTVECT/0FFFFFF80,RESETVECT/0FFFFFFFC
+-library=D:\DOCUME~1\TEXASI~1\WORKSP~1\Pixhawk\HARDWA~2\Pixhawk.lib
+-noprelink
+-list=Pixhawk.map
+-show
+-nooptimize
+-debug
+-output=D:\Documents\Texas Instruments\workspace_v7\Pixhawk\HardwareDebug\Pixhawk.abs
+-rom=D=R,D_1=R_1,D_2=R_2
+-nocompress
+-nomessage
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SU
+                                  00000004  00000103       100   4
+SI
+                                  00000104  00000403       300   4
+B_1
+                                  00000404  0000047d        7a   1
+R_1
+                                  0000047e  000004a6        29   1
+B_2
+                                  000004a8  000008fb       454   2
+R_2
+                                  000008fc  000008ff         4   2
+B
+                                  00000900  000009af        b0   4
+R
+                                  000009b0  00000a1b        6c   4
+PResetPRG
+                                  fffe0000  fffe003d        3e   1
+C_1
+                                  fffe003e  fffe0265       228   1
+C_2
+                                  fffe0266  fffe0266         0   1
+C
+                                  fffe0268  fffe029b        34   4
+C$DSEC
+                                  fffe029c  fffe02bf        24   4
+C$BSEC
+                                  fffe02c0  fffe02d7        18   4
+C$INIT
+                                  fffe02d8  fffe02d8         0   1
+C$VECT
+                                  fffe02d8  fffe06d7       400   4
+C$VTBL
+                                  fffe06d8  fffe06d8         0   1
+D
+                                  fffe06d8  fffe0743        6c   4
+D_1
+                                  fffe0744  fffe076c        29   1
+D_2
+                                  fffe076e  fffe0771         4   2
+W
+                                  fffe0772  fffe0772         0   1
+W_1
+                                  fffe0772  fffe0772         0   1
+W_2
+                                  fffe0772  fffe0772         0   1
+L
+                                  fffe0774  fffe07cb        58   4
+PIntPRG
+                                  fffe07cc  fffe07d9         e   1
+P
+                                  fffe07da  fffe388c      30b3   1
+EXCEPTVECT
+                                  ffffff80  fffffffb        7c   4
+RESETVECT
+                                  fffffffc  ffffffff         4   4
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SU
+FILE=.\src\cg_src\r_cg_resetprg.obj
+                                  00000004  00000103       100
+
+SECTION=SI
+FILE=.\src\cg_src\r_cg_resetprg.obj
+                                  00000104  00000403       300
+
+SECTION=B_1
+FILE=.\src\camera\camera.obj
+                                  00000404  00000404         1
+  _g5_rx_char
+                                  00000404         1   data ,g         9
+FILE=.\src\mavlink_receive\mavlink_receive.obj
+                                  00000405  0000047d        79
+  _Height_Buffer
+                                  00000405        14   data ,g         1
+  _Angle_Buffer
+                                  00000419        28   data ,g         3
+  _Rx_Buffer_height
+                                  00000441        14   data ,g         0
+  _Rx_Buffer_angle
+                                  00000455        28   data ,g         0
+  _g1_rx_char
+                                  0000047d         1   data ,g         3
+
+SECTION=R_1
+FILE=.\src\camera\camera.obj
+                                  0000047e  00000480         3
+  _get_x
+                                  0000047e         1   data ,g         4
+  _get_y
+                                  0000047f         1   data ,g         4
+  _i$1
+                                  00000480         1   data ,l         5
+FILE=.\src\cg_src\r_cg_main.obj
+                                  00000481  00000482         2
+  _dest_height
+                                  00000481         1   data ,g         e
+  _mission
+                                  00000482         1   data ,g         5
+FILE=.\src\delay\delay.obj
+                                  00000483  00000483         1
+  _time_flag
+                                  00000483         1   data ,g         3
+FILE=.\src\matrix_key\matrix_key.obj
+                                  00000484  00000493        10
+  _keyboard
+                                  00000484        10   data ,g         1
+FILE=.\src\mavlink_receive\mavlink_receive.obj
+                                  00000494  00000494         1
+  _rx_buffer
+                                  00000494         1   data ,g         0
+FILE=.\src\remote_ctl\remote_ctl.obj
+                                  00000495  000004a6        12
+  _Alarm_On
+                                  00000495         2   data ,g         1
+  _Alarm_Off
+                                  00000497         2   data ,g         1
+  _str
+                                  00000499         c   data ,g         a
+  _sonar
+                                  000004a5         1   data ,g         4
+  _alarm_count$1
+                                  000004a6         1   data ,l         3
+
+SECTION=B_2
+FILE=.\src\cg_src\r_cg_rspi.obj
+                                  000004a8  000004a9         2
+  _g_rspi0_tx_count
+                                  000004a8         2   data ,g         3
+FILE=.\src\cg_src\r_cg_sbrk.obj
+                                  000004aa  000008a9       400
+  _heap_area
+                                  000004aa       400   data ,l         2
+FILE=.\src\cg_src\r_cg_sci.obj
+                                  000008aa  000008b3         a
+  _g_sci1_rx_count
+                                  000008aa         2   data ,g         4
+  _g_sci1_rx_length
+                                  000008ac         2   data ,g         3
+  _g_sci5_tx_count
+                                  000008ae         2   data ,g         3
+  _g_sci5_rx_count
+                                  000008b0         2   data ,g         4
+  _g_sci5_rx_length
+                                  000008b2         2   data ,g         3
+FILE=.\src\ppm_encoder\ppm_encoder.obj
+                                  000008b4  000008fb        48
+  _ppm_data_buf
+                                  000008b4        24   data ,l         4
+  _ppm_data_shadow
+                                  000008d8        12   data ,l         4
+  _ppm_data
+                                  000008ea        12   data ,l         9
+
+SECTION=R_2
+FILE=.\src\delay\delay.obj
+                                  000008fc  000008fd         2
+  _time_count
+                                  000008fc         2   data ,g         3
+FILE=.\src\sonar\sonar.obj
+                                  000008fe  000008ff         2
+  _MTU5_Count
+                                  000008fe         2   data ,g         3
+
+SECTION=B
+FILE=.\src\PID_control\PID_control.obj
+                                  00000900  0000096f        70
+  _PID_X
+                                  00000900        1c   data ,g        17
+  _PID_Y
+                                  0000091c        1c   data ,g        17
+  _PID_Data_X
+                                  00000938        1c   data ,g        19
+  _PID_Data_Y
+                                  00000954        1c   data ,g        19
+FILE=.\src\cg_src\r_cg_main.obj
+                                  00000970  0000097f        10
+  _current_height
+                                  00000970         4   data ,g         0
+  _Roll
+                                  00000974         4   data ,g         2
+  _Pitch
+                                  00000978         4   data ,g         2
+  _Yaw
+                                  0000097c         4   data ,g         4
+FILE=.\src\cg_src\r_cg_rspi.obj
+                                  00000980  00000983         4
+  _gp_rspi0_tx_address
+                                  00000980         4   data ,g         3
+FILE=.\src\cg_src\r_cg_sci.obj
+                                  00000984  0000098f         c
+  _gp_sci1_rx_address
+                                  00000984         4   data ,g         3
+  _gp_sci5_tx_address
+                                  00000988         4   data ,g         3
+  _gp_sci5_rx_address
+                                  0000098c         4   data ,g         3
+FILE=.\src\mavlink_receive\mavlink_receive.obj
+                                  00000990  000009a3        14
+  _uchar_float
+                                  00000990         4   data ,g         5
+  _float_uchar
+                                  00000994         4   data ,g         0
+  _angle
+                                  00000998         c   data ,g         0
+FILE=.\src\ppm_encoder\ppm_encoder.obj
+                                  000009a4  000009af         c
+  _ppm_data_buf_index
+                                  000009a4         4   data ,l         7
+  _ppm_shadow_state
+                                  000009a8         4   data ,l         6
+  _ppm_shadow_ch_idx
+                                  000009ac         4   data ,l         4
+
+SECTION=R
+FILE=.\src\OLED\OLED.obj
+                                  000009b0  000009c3        14
+  _mission_info
+                                  000009b0         c   data ,l         3
+  _SPI0_flag
+                                  000009bc         4   data ,g         3
+  _temp_buf
+                                  000009c0         4   data ,l         3
+FILE=.\src\PID_control\PID_control.obj
+                                  000009c4  000009d7        14
+  _start_PID_X
+                                  000009c4         4   data ,g         8
+  _start_PID_Y
+                                  000009c8         4   data ,g         8
+  _start_PID_H
+                                  000009cc         4   data ,g         9
+  _err_x
+                                  000009d0         4   data ,g         2
+  _err_y
+                                  000009d4         4   data ,g         2
+FILE=.\src\camera\camera.obj
+                                  000009d8  000009db         4
+  _start_receive
+                                  000009d8         4   data ,g         4
+FILE=.\src\cg_src\r_cg_main.obj
+                                  000009dc  000009ef        14
+  _is_alarm
+                                  000009dc         4   data ,g         8
+  _is_drop
+                                  000009e0         4   data ,g         3
+  _start_program
+                                  000009e4         c   data ,g         3
+FILE=.\src\cg_src\r_cg_sbrk.obj
+                                  000009f0  000009f3         4
+  _brk
+                                  000009f0         4   data ,l         3
+FILE=.\src\mavlink_receive\mavlink_receive.obj
+                                  000009f4  00000a03        10
+  _start_receive_height
+                                  000009f4         4   data ,g         0
+  _start_receive_angle
+                                  000009f8         4   data ,g         0
+  _is_Height
+                                  000009fc         4   data ,g         0
+  _is_Angle
+                                  00000a00         4   data ,g         0
+FILE=.\src\mission_ctl\mission_ctl.obj
+                                  00000a04  00000a07         4
+  _mission_start
+                                  00000a04         4   data ,g         7
+FILE=.\src\ppm_encoder\ppm_encoder.obj
+                                  00000a08  00000a0f         8
+  _ppm_period_us
+                                  00000a08         4   data ,l         6
+  _first_time
+                                  00000a0c         4   data ,l         2
+FILE=.\src\remote_ctl\remote_ctl.obj
+                                  00000a10  00000a13         4
+  _sci5_trans
+                                  00000a10         4   data ,g         5
+FILE=.\src\sonar\sonar.obj
+                                  00000a14  00000a1b         8
+  _sonar_height
+                                  00000a14         4   data ,g        23
+  _First_Int
+                                  00000a18         4   data ,l         4
+
+SECTION=PResetPRG
+FILE=.\src\cg_src\r_cg_resetprg.obj
+                                  fffe0000  fffe003d        3e
+  _PowerON_Reset_PC
+                                  fffe0000        3e   entry,g         1
+
+SECTION=C_1
+FILE=.\src\OLED\OLED.obj
+                                  fffe003e  fffe0265       228
+  _F6x8
+                                  fffe003e       228   data ,g         2
+
+SECTION=C
+FILE=.\src\cg_src\r_cg_dbsct.obj
+                                  fffe0268  fffe029b        34
+  __CTBL
+                                  fffe0268        34   data ,g         0
+
+SECTION=C$DSEC
+FILE=.\src\cg_src\r_cg_dbsct.obj
+                                  fffe029c  fffe02bf        24
+  __DTBL
+                                  fffe029c        24   data ,g         0
+
+SECTION=C$BSEC
+FILE=.\src\cg_src\r_cg_dbsct.obj
+                                  fffe02c0  fffe02d7        18
+  __BTBL
+                                  fffe02c0        18   data ,g         0
+
+SECTION=C$VECT
+FILE=.\src\cg_src\r_cg_dbsct.obj
+                                  fffe02d8  fffe06d7       400
+
+SECTION=D
+FILE=.\src\OLED\OLED.obj
+                                  fffe06d8  fffe06eb        14
+FILE=.\src\PID_control\PID_control.obj
+                                  fffe06ec  fffe06ff        14
+FILE=.\src\camera\camera.obj
+                                  fffe0700  fffe0703         4
+FILE=.\src\cg_src\r_cg_main.obj
+                                  fffe0704  fffe0717        14
+FILE=.\src\cg_src\r_cg_sbrk.obj
+                                  fffe0718  fffe071b         4
+FILE=.\src\mavlink_receive\mavlink_receive.obj
+                                  fffe071c  fffe072b        10
+FILE=.\src\mission_ctl\mission_ctl.obj
+                                  fffe072c  fffe072f         4
+FILE=.\src\ppm_encoder\ppm_encoder.obj
+                                  fffe0730  fffe0737         8
+FILE=.\src\remote_ctl\remote_ctl.obj
+                                  fffe0738  fffe073b         4
+FILE=.\src\sonar\sonar.obj
+                                  fffe073c  fffe0743         8
+
+SECTION=D_1
+FILE=.\src\camera\camera.obj
+                                  fffe0744  fffe0746         3
+FILE=.\src\cg_src\r_cg_main.obj
+                                  fffe0747  fffe0748         2
+FILE=.\src\delay\delay.obj
+                                  fffe0749  fffe0749         1
+FILE=.\src\matrix_key\matrix_key.obj
+                                  fffe074a  fffe0759        10
+FILE=.\src\mavlink_receive\mavlink_receive.obj
+                                  fffe075a  fffe075a         1
+FILE=.\src\remote_ctl\remote_ctl.obj
+                                  fffe075b  fffe076c        12
+
+SECTION=D_2
+FILE=.\src\delay\delay.obj
+                                  fffe076e  fffe076f         2
+FILE=.\src\sonar\sonar.obj
+                                  fffe0770  fffe0771         2
+
+SECTION=L
+FILE=.\src\OLED\OLED.obj
+                                  fffe0774  fffe0795        22
+FILE=.\src\cg_src\r_cg_main.obj
+                                  fffe0798  fffe07cb        34
+
+SECTION=PIntPRG
+FILE=.\src\cg_src\r_cg_intprg.obj
+                                  fffe07cc  fffe07d9         e
+  _r_undefined_exception
+                                  fffe07cc         2   func ,g         1
+  _r_privileged_exception
+                                  fffe07ce         2   func ,g         1
+  _r_floatingpoint_exception
+                                  fffe07d0         2   func ,g         1
+  _r_access_exception
+                                  fffe07d2         2   func ,g         1
+  _r_reserved_exception
+                                  fffe07d4         2   func ,g        13
+  _r_nmi_exception
+                                  fffe07d6         2   func ,g         1
+  _r_brk_exception
+                                  fffe07d8         2   func ,g         0
+
+SECTION=P
+FILE=.\src\OLED\OLED.obj
+                                  fffe07da  fffe109c       8c3
+  _OLED_delayus
+                                  fffe07da        24   func ,g         4
+  _OLED_WB
+                                  fffe07fe        4b   func ,l         2
+  _OLED_WrDat
+                                  fffe0849        12   func ,l         3
+  _OLED_WrCmd
+                                  fffe085b        12   func ,l        1e
+  _oled_Set_Pos
+                                  fffe086d        25   func ,l         3
+  _oled_Set_AddressingMode
+                                  fffe0892        11   func ,l         1
+  _oled_Set_StartLine
+                                  fffe08a3         d   func ,l         1
+  _oled_Set_ContrastControl
+                                  fffe08b0        11   func ,l         1
+  _oled_Set_Charge_Pump
+                                  fffe08c1        13   func ,l         1
+  _oled_Set_Segment_Remap
+                                  fffe08d4         f   func ,l         1
+  _oled_Set_Entire_Display
+                                  fffe08e3         f   func ,l         1
+  _oled_Set_Inverse_Display
+                                  fffe08f2         f   func ,l         1
+  _oled_Set_Multiplex_Ratio
+                                  fffe0901        11   func ,l         1
+  _oled_Set_Display_On_Off
+                                  fffe0912         f   func ,l         2
+  _oled_Set_Common_Remap
+                                  fffe0921         f   func ,l         1
+  _oled_Set_Display_Offset
+                                  fffe0930        11   func ,l         1
+  _oled_Set_Display_Clock
+                                  fffe0941        11   func ,l         1
+  _oled_Set_Precharge_Period
+                                  fffe0952        11   func ,l         1
+  _oled_Set_Common_Config
+                                  fffe0963        13   func ,l         1
+  _oled_Set_VCOMH
+                                  fffe0976        11   func ,l         1
+  _SPI0_TransmitHandler
+                                  fffe0987         a   func ,g         1
+  _oled_init
+                                  fffe0991        86   func ,g         1
+  _oled_CLS
+                                  fffe0a17        4a   func ,g         2
+  _oled_P6x8Char
+                                  fffe0a61        53   func ,g        29
+  _oled_P6x8Str
+                                  fffe0ab4        73   func ,g         6
+  _oled_PrintValueC
+                                  fffe0b27        94   func ,g         1
+  _oled_PrintValueI
+                                  fffe0bbb        e5   func ,g         0
+  _oled_PrintValueFP
+                                  fffe0ca0       129   func ,g         4
+  _oled_PrintValueF
+                                  fffe0dc9       27c   func ,g         0
+  _display_mission_info
+                                  fffe1045        42   func ,g         1
+  _display_mission_executing
+                                  fffe1087        16   func ,g         4
+FILE=.\src\PID_control\PID_control.obj
+                                  fffe109d  fffe16a8       60c
+  _PID_Init
+                                  fffe109d       13d   func ,g         1
+  _Position_PID
+                                  fffe11da       342   func ,g         1
+  _CMT2_IntHandler
+                                  fffe151c       18d   func ,g         1
+FILE=.\src\camera\camera.obj
+                                  fffe16a9  fffe1832       18a
+  _SCI5_IntHandler
+                                  fffe16a9       18a   func ,g         1
+FILE=.\src\cg_src\r_cg_cgc.obj
+                                  fffe1833  fffe18cc        9a
+  _R_CGC_Create
+                                  fffe1833        9a   func ,g         1
+FILE=.\src\cg_src\r_cg_cmt.obj
+                                  fffe18cd  fffe1a46       17a
+  _R_CMT0_Create
+                                  fffe18cd        32   func ,g         1
+  _R_CMT0_Start
+                                  fffe18ff        13   func ,g         1
+  _R_CMT0_Stop
+                                  fffe1912        16   func ,g         0
+  _R_CMT1_Create
+                                  fffe1928        34   func ,g         1
+  _R_CMT1_Start
+                                  fffe195c        13   func ,g         1
+  _R_CMT1_Stop
+                                  fffe196f        16   func ,g         0
+  _R_CMT2_Create
+                                  fffe1985        38   func ,g         1
+  _R_CMT2_Start
+                                  fffe19bd        13   func ,g         1
+  _R_CMT2_Stop
+                                  fffe19d0        16   func ,g         0
+  _R_CMT3_Create
+                                  fffe19e6        38   func ,g         1
+  _R_CMT3_Start
+                                  fffe1a1e        13   func ,g         1
+  _R_CMT3_Stop
+                                  fffe1a31        16   func ,g         0
+FILE=.\src\cg_src\r_cg_cmt_user.obj
+                                  fffe1a47  fffe1a7e        38
+  _r_cmt_cmi0_interrupt
+                                  fffe1a47         e   func ,l         0
+  _r_cmt_cmi1_interrupt
+                                  fffe1a55         e   func ,l         0
+  _r_cmt_cmi2_interrupt
+                                  fffe1a63         e   func ,l         0
+  _r_cmt_cmi3_interrupt
+                                  fffe1a71         e   func ,l         0
+FILE=.\src\cg_src\r_cg_hardware_setup.obj
+                                  fffe1a7f  fffe1add        5f
+  _R_Systeminit
+                                  fffe1a7f        5b   func ,g         1
+  _HardwareSetup
+                                  fffe1ada         4   func ,g         1
+FILE=.\src\cg_src\r_cg_icu.obj
+                                  fffe1ade  fffe1b84        a7
+  _R_ICU_Create
+                                  fffe1ade        87   func ,g         1
+  _R_ICU_IRQ0_Start
+                                  fffe1b65         8   func ,g         1
+  _R_ICU_IRQ0_Stop
+                                  fffe1b6d         8   func ,g         0
+  _R_ICU_IRQ1_Start
+                                  fffe1b75         8   func ,g         1
+  _R_ICU_IRQ1_Stop
+                                  fffe1b7d         8   func ,g         0
+FILE=.\src\cg_src\r_cg_icu_user.obj
+                                  fffe1b85  fffe1ba0        1c
+  _r_icu_irq0_interrupt
+                                  fffe1b85         e   func ,l         0
+  _r_icu_irq1_interrupt
+                                  fffe1b93         e   func ,l         0
+FILE=.\src\cg_src\r_cg_main.obj
+                                  fffe1ba1  fffe1c37        97
+  _main
+                                  fffe1ba1        66   func ,g         1
+  _R_MAIN_UserInit
+                                  fffe1c07        31   func ,l         1
+FILE=.\src\cg_src\r_cg_mtu3.obj
+                                  fffe1c38  fffe1d15        de
+  _R_MTU3_Create
+                                  fffe1c38        be   func ,g         1
+  _R_MTU3_C5_Start
+                                  fffe1cf6        10   func ,g         1
+  _R_MTU3_C5_Stop
+                                  fffe1d06        10   func ,g         0
+FILE=.\src\cg_src\r_cg_mtu3_user.obj
+                                  fffe1d16  fffe1d23         e
+  _r_mtu3_tgiu5_interrupt
+                                  fffe1d16         e   func ,l         0
+FILE=.\src\cg_src\r_cg_port.obj
+                                  fffe1d24  fffe1dd4        b1
+  _R_PORT_Create
+                                  fffe1d24        b1   func ,g         1
+FILE=.\src\cg_src\r_cg_rspi.obj
+                                  fffe1dd5  fffe1ef9       125
+  _R_RSPI0_Create
+                                  fffe1dd5        a8   func ,g         1
+  _R_RSPI0_Start
+                                  fffe1e7d        2a   func ,g         1
+  _R_RSPI0_Stop
+                                  fffe1ea7        16   func ,g         0
+  _R_RSPI0_Send
+                                  fffe1ebd        3d   func ,g         1
+FILE=.\src\cg_src\r_cg_rspi_user.obj
+                                  fffe1efa  fffe1f80        87
+  _r_rspi0_transmit_interrupt
+                                  fffe1efa        66   func ,l         0
+  _r_rspi0_idle_interrupt
+                                  fffe1f60        1c   func ,l         0
+  _r_rspi0_callback_transmitend
+                                  fffe1f7c         5   func ,l         1
+FILE=.\src\cg_src\r_cg_sbrk.obj
+                                  fffe1f81  fffe1fbc        3c
+  _sbrk
+                                  fffe1f81        3c   func ,g         0
+FILE=.\src\cg_src\r_cg_sci.obj
+                                  fffe1fbd  fffe227d       2c1
+  _R_SCI1_Create
+                                  fffe1fbd        76   func ,g         1
+  _R_SCI1_Start
+                                  fffe2033        1a   func ,g         1
+  _R_SCI1_Stop
+                                  fffe204d        28   func ,g         0
+  _R_SCI1_Serial_Receive
+                                  fffe2075        46   func ,g         2
+  _R_SCI5_Create
+                                  fffe20bb        a5   func ,g         1
+  _R_SCI5_Start
+                                  fffe2160        34   func ,g         1
+  _R_SCI5_Stop
+                                  fffe2194        5c   func ,g         0
+  _R_SCI5_Serial_Receive
+                                  fffe21f0        46   func ,g         2
+  _R_SCI5_Serial_Send
+                                  fffe2236        48   func ,g         3
+FILE=.\src\cg_src\r_cg_sci_user.obj
+                                  fffe227e  fffe244b       1ce
+  _r_sci1_receive_interrupt
+                                  fffe227e        60   func ,l         0
+  _r_sci1_receiveerror_interrupt
+                                  fffe22de        31   func ,l         0
+  _r_sci1_callback_receiveend
+                                  fffe230f         5   func ,l         1
+  _r_sci1_callback_receiveerror
+                                  fffe2314         1   func ,l         1
+  _r_sci5_transmit_interrupt
+                                  fffe2315        4c   func ,l         0
+  _r_sci5_transmitend_interrupt
+                                  fffe2361        2e   func ,l         0
+  _r_sci5_receive_interrupt
+                                  fffe238f        60   func ,l         0
+  _r_sci5_receiveerror_interrupt
+                                  fffe23ef        31   func ,l         0
+  _r_sci5_callback_transmitend
+                                  fffe2420         5   func ,l         1
+  _r_sci5_callback_receiveend
+                                  fffe2425         5   func ,l         1
+  _r_sci5_callback_receiveerror
+                                  fffe242a         1   func ,l         1
+  _R_ASYNC_Init
+                                  fffe242b        21   func ,g         1
+FILE=.\src\delay\delay.obj
+                                  fffe244c  fffe2497        4c
+  _CMT1_Init
+                                  fffe244c         5   func ,g         1
+  _delayms
+                                  fffe2451        34   func ,g        20
+  _CMT1_IntHandler
+                                  fffe2485        13   func ,g         1
+FILE=.\src\matrix_key\matrix_key.obj
+                                  fffe2498  fffe2617       180
+  _R_Keyboard_Init
+                                  fffe2498        1d   func ,g         1
+  _R_PORT_Row_Write
+                                  fffe24b5        90   func ,g         1
+  _R_PORT_Col_Read
+                                  fffe2545        46   func ,g         3
+  _read_one_number
+                                  fffe258b        8d   func ,g         5
+FILE=.\src\mavlink_receive\mavlink_receive.obj
+                                  fffe2618  fffe2769       152
+  _uchar_to_float
+                                  fffe2618        3c   func ,l         4
+  _calculate_height
+                                  fffe2654        18   func ,g         0
+  _calculate_angle
+                                  fffe266c        b8   func ,g         0
+  _SCI1_IntHandler
+                                  fffe2724        46   func ,g         1
+FILE=.\src\mission_ctl\mission_ctl.obj
+                                  fffe276a  fffe3236       acd
+  _arm
+                                  fffe276a        5a   func ,g         4
+  _disarm
+                                  fffe27c4        1e   func ,g         4
+  _is_Emergency
+                                  fffe27e2        2f   func ,g         2
+  _read_dest_height
+                                  fffe2811        59   func ,g         4
+  _alt_hold
+                                  fffe286a       20f   func ,g         1
+  _fix_car
+                                  fffe2a79       25b   func ,g         1
+  _chase_car
+                                  fffe2cd4       27b   func ,g         1
+  _stunt
+                                  fffe2f4f       23e   func ,g         1
+  _mission_select
+                                  fffe318d        61   func ,g         1
+  _mission_execute
+                                  fffe31ee        49   func ,g         1
+FILE=.\src\ppm_encoder\ppm_encoder.obj
+                                  fffe3237  fffe357b       345
+  _ppm_encoder_init
+                                  fffe3237         d   func ,g         1
+  _ppm_gpio_init
+                                  fffe3244         6   func ,l         1
+  _ppm_gpio_negative
+                                  fffe324a         8   func ,l         1
+  _ppm_gpio_positive
+                                  fffe3252         8   func ,l         1
+  _ppm_gpio_set_next
+                                  fffe325a        11   func ,l         5
+  _ppm_timer_config
+                                  fffe326b        1d   func ,l         1
+  _ppm_encoder_set_data
+                                  fffe3288        59   func ,g         1
+  _ppm_data_calculate_idle
+                                  fffe32e1        35   func ,l         2
+  _ppm_data_set_default
+                                  fffe3316        25   func ,l         2
+  _ppm_data_buf_init
+                                  fffe333b        2e   func ,l         1
+  _ppm_data_shadow_init
+                                  fffe3369         4   func ,l         1
+  _ppm_data_shadow_update
+                                  fffe336d        58   func ,g         2
+  _handle_negative
+                                  fffe33c5        22   func ,l         1
+  _handle_positive
+                                  fffe33e7        52   func ,l         1
+  _handle_idle_neg
+                                  fffe3439        22   func ,l         1
+  _handle_idle_pos
+                                  fffe345b        1f   func ,l         1
+  _ppm_data_shadow_one_step
+                                  fffe347a        37   func ,g         1
+  _set_ppm
+                                  fffe34b1        aa   func ,g        30
+  _CMT0_IntHandler
+                                  fffe355b        21   func ,g         1
+FILE=.\src\remote_ctl\remote_ctl.obj
+                                  fffe357c  fffe37b7       23c
+  _SCI5_TransIntHandler
+                                  fffe357c         a   func ,g         1
+  _remote_ctl_init
+                                  fffe3586         9   func ,g         1
+  _IRQ0_IntHandler
+                                  fffe358f        11   func ,g         1
+  _IRQ1_IntHandler
+                                  fffe35a0         7   func ,g         1
+  _hex_to_char
+                                  fffe35a7        fa   func ,g         1
+  _CMT3_IntHandler
+                                  fffe36a1       117   func ,g         1
+FILE=.\src\sonar\sonar.obj
+                                  fffe37b8  fffe3842        8b
+  _Calculate_Height
+                                  fffe37b8        28   func ,g         1
+  _MTU5_IntHandler
+                                  fffe37e0        63   func ,g         1
+FILE=__initsct
+                                  fffe3843  fffe388c        4a
+  __INITSCT
+                                  fffe3843         0   none ,g         1
+  loop1
+                                  fffe3855         0   none ,l         1
+  next_loop1
+                                  fffe3863         0   none ,l         2
+  loop3
+                                  fffe3875         0   none ,l         1
+  next_loop3
+                                  fffe3886         0   none ,l         2
+
+SECTION=EXCEPTVECT
+FILE=.\src\cg_src\r_cg_vecttbl.obj
+                                  ffffff80  fffffffb        7c
+  _Excpt_Vectors
+                                  ffffff80        7c   data ,g         0
+
+SECTION=RESETVECT
+FILE=.\src\cg_src\r_cg_vecttbl.obj
+                                  fffffffc  ffffffff         4
+  _Reset_Vectors
+                                  fffffffc         4   data ,g         0
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
