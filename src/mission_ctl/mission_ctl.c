@@ -11,11 +11,11 @@ bool mission_start = false;
 
 void arm(uint16_t flight_mode)
 {
-    delayms(5000);
+//    delayms(5000);
     set_ppm(channel_val_MID,channel_val_MID,channel_val_MIN,channel_val_MAX,flight_mode,Emergency_OFF);
     delayms(3000);
     set_ppm(channel_val_MID,channel_val_MID,channel_val_MIN,channel_val_MID,flight_mode,Emergency_OFF);
-    delayms(3000);
+    delayms(1000);
 }
 
 void disarm(void)
@@ -89,13 +89,14 @@ void alt_hold(void)
     }
     while(sonar_height > 0.1)
         set_ppm(0,0,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
+    start_PID_X = false;
+    start_PID_Y = false;
     disarm();
 }
 
 void fix_car(void)
 {
     while(!mission_start);
-//    SET_FIX_GREEN;
     display_mission_executing(3);
     arm(Alt_Hold);
     set_ppm(channel_val_MID,channel_val_MID,channel_percent(20),channel_val_MID,Alt_Hold,Emergency_OFF);
@@ -106,7 +107,6 @@ void fix_car(void)
     delayms(500);
     set_ppm(channel_val_MID,channel_val_MID,channel_percent(60),channel_val_MID,Alt_Hold,Emergency_OFF);
     delayms(500);
-//    set_ppm(channel_val_MID - 10,(channel_val_MID - channel_val_RANGE*4/100),0,0,Alt_Hold,Emergency_OFF);
     while(sonar_height * 100 < dest_height)
     {
         if (sonar_height > 0.25)
@@ -116,12 +116,14 @@ void fix_car(void)
         }
         set_ppm(0,0,(channel_percent(61) + 2 * (dest_height - sonar_height * 100)),channel_val_MID,Alt_Hold,Emergency_OFF);
     }
-    SET_FIX_GREEN;
     set_ppm(0,0,channel_percent(50),channel_val_MID,Alt_Hold,Emergency_OFF);
     start_PID_H = true;
-    while(!is_alarm);
+
+    delayms(1000);
+    SET_FIX_GREEN;
     start_PID_Y = true;
-    delayms(8000);
+
+    delayms(10000);
     start_PID_H = false;
     while(sonar_height > 0.1)
     {
@@ -135,14 +137,13 @@ void fix_car(void)
     start_PID_X = false;
     start_PID_Y = false;
     while(sonar_height > 0.1)
-        set_ppm(channel_val_MID,0,channel_percent(36),channel_val_MID,Alt_Hold,Emergency_OFF);
+        set_ppm(0,0,channel_percent(36),channel_val_MID,Alt_Hold,Emergency_OFF);
     disarm();
 }
 
 void chase_car(void)
 {
     while(!mission_start);
-//    SET_FIX_GREEN;
     display_mission_executing(3);
     arm(Alt_Hold);
     set_ppm(channel_val_MID,channel_val_MID,channel_percent(20),channel_val_MID,Alt_Hold,Emergency_OFF);
@@ -153,7 +154,6 @@ void chase_car(void)
     delayms(500);
     set_ppm(channel_val_MID,channel_val_MID,channel_percent(60),channel_val_MID,Alt_Hold,Emergency_OFF);
     delayms(500);
-    //    set_ppm(channel_val_MID - 10,(channel_val_MID - channel_val_RANGE*4/100),0,0,Alt_Hold,Emergency_OFF);
     while(sonar_height * 100 < dest_height)
     {
         if (sonar_height > 0.25)
@@ -163,14 +163,14 @@ void chase_car(void)
         }
         set_ppm(0,0,(channel_percent(61) + 2 * (dest_height - sonar_height * 100)),channel_val_MID,Alt_Hold,Emergency_OFF);
     }
-    SET_FIX_GREEN;
     set_ppm(0,0,channel_percent(50),channel_val_MID,Alt_Hold,Emergency_OFF);
     start_PID_H = true;
-    while(!is_alarm);
+
+    delayms(1000);
+    SET_FIX_GREEN;
     start_PID_Y = true;
-    delayms(10000);
     while(!is_drop);
-    delayms(5000);
+    delayms(6000);
     start_PID_H = false;
     while(sonar_height > 0.1)
     {

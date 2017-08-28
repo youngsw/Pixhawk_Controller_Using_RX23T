@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W2.06.00 )             14-Aug-2017 09:51:18
+Renesas Optimizing Linker (W2.06.00 )             28-Aug-2017 14:03:16
 
 *** Options ***
 
@@ -104,7 +104,7 @@ L
 PIntPRG
                                   fffe07cc  fffe07d9         e   1
 P
-                                  fffe07da  fffe388c      30b3   1
+                                  fffe07da  fffe386c      3093   1
 EXCEPTVECT
                                   ffffff80  fffffffb        7c   4
 RESETVECT
@@ -284,9 +284,9 @@ FILE=.\src\OLED\OLED.obj
 FILE=.\src\PID_control\PID_control.obj
                                   000009c4  000009d7        14
   _start_PID_X
-                                  000009c4         4   data ,g         8
+                                  000009c4         4   data ,g         9
   _start_PID_Y
-                                  000009c8         4   data ,g         8
+                                  000009c8         4   data ,g         9
   _start_PID_H
                                   000009cc         4   data ,g         9
   _err_x
@@ -300,7 +300,7 @@ FILE=.\src\camera\camera.obj
 FILE=.\src\cg_src\r_cg_main.obj
                                   000009dc  000009ef        14
   _is_alarm
-                                  000009dc         4   data ,g         8
+                                  000009dc         4   data ,g         6
   _is_drop
                                   000009e0         4   data ,g         3
   _start_program
@@ -700,99 +700,99 @@ FILE=.\src\mavlink_receive\mavlink_receive.obj
   _SCI1_IntHandler
                                   fffe2724        46   func ,g         1
 FILE=.\src\mission_ctl\mission_ctl.obj
-                                  fffe276a  fffe3236       acd
+                                  fffe276a  fffe3216       aad
   _arm
-                                  fffe276a        5a   func ,g         4
+                                  fffe276a        50   func ,g         4
   _disarm
-                                  fffe27c4        1e   func ,g         4
+                                  fffe27ba        1e   func ,g         4
   _is_Emergency
-                                  fffe27e2        2f   func ,g         2
+                                  fffe27d8        2f   func ,g         2
   _read_dest_height
-                                  fffe2811        59   func ,g         4
+                                  fffe2807        59   func ,g         4
   _alt_hold
-                                  fffe286a       20f   func ,g         1
+                                  fffe2860       221   func ,g         1
   _fix_car
-                                  fffe2a79       25b   func ,g         1
+                                  fffe2a81       24b   func ,g         1
   _chase_car
-                                  fffe2cd4       27b   func ,g         1
+                                  fffe2ccc       263   func ,g         1
   _stunt
-                                  fffe2f4f       23e   func ,g         1
+                                  fffe2f2f       23e   func ,g         1
   _mission_select
-                                  fffe318d        61   func ,g         1
+                                  fffe316d        61   func ,g         1
   _mission_execute
-                                  fffe31ee        49   func ,g         1
+                                  fffe31ce        49   func ,g         1
 FILE=.\src\ppm_encoder\ppm_encoder.obj
-                                  fffe3237  fffe357b       345
+                                  fffe3217  fffe355b       345
   _ppm_encoder_init
-                                  fffe3237         d   func ,g         1
+                                  fffe3217         d   func ,g         1
   _ppm_gpio_init
-                                  fffe3244         6   func ,l         1
+                                  fffe3224         6   func ,l         1
   _ppm_gpio_negative
-                                  fffe324a         8   func ,l         1
+                                  fffe322a         8   func ,l         1
   _ppm_gpio_positive
-                                  fffe3252         8   func ,l         1
+                                  fffe3232         8   func ,l         1
   _ppm_gpio_set_next
-                                  fffe325a        11   func ,l         5
+                                  fffe323a        11   func ,l         5
   _ppm_timer_config
-                                  fffe326b        1d   func ,l         1
+                                  fffe324b        1d   func ,l         1
   _ppm_encoder_set_data
-                                  fffe3288        59   func ,g         1
+                                  fffe3268        59   func ,g         1
   _ppm_data_calculate_idle
-                                  fffe32e1        35   func ,l         2
+                                  fffe32c1        35   func ,l         2
   _ppm_data_set_default
-                                  fffe3316        25   func ,l         2
+                                  fffe32f6        25   func ,l         2
   _ppm_data_buf_init
-                                  fffe333b        2e   func ,l         1
+                                  fffe331b        2e   func ,l         1
   _ppm_data_shadow_init
-                                  fffe3369         4   func ,l         1
+                                  fffe3349         4   func ,l         1
   _ppm_data_shadow_update
-                                  fffe336d        58   func ,g         2
+                                  fffe334d        58   func ,g         2
   _handle_negative
-                                  fffe33c5        22   func ,l         1
+                                  fffe33a5        22   func ,l         1
   _handle_positive
-                                  fffe33e7        52   func ,l         1
+                                  fffe33c7        52   func ,l         1
   _handle_idle_neg
-                                  fffe3439        22   func ,l         1
+                                  fffe3419        22   func ,l         1
   _handle_idle_pos
-                                  fffe345b        1f   func ,l         1
+                                  fffe343b        1f   func ,l         1
   _ppm_data_shadow_one_step
-                                  fffe347a        37   func ,g         1
+                                  fffe345a        37   func ,g         1
   _set_ppm
-                                  fffe34b1        aa   func ,g        30
+                                  fffe3491        aa   func ,g        30
   _CMT0_IntHandler
-                                  fffe355b        21   func ,g         1
+                                  fffe353b        21   func ,g         1
 FILE=.\src\remote_ctl\remote_ctl.obj
-                                  fffe357c  fffe37b7       23c
+                                  fffe355c  fffe3797       23c
   _SCI5_TransIntHandler
-                                  fffe357c         a   func ,g         1
+                                  fffe355c         a   func ,g         1
   _remote_ctl_init
-                                  fffe3586         9   func ,g         1
+                                  fffe3566         9   func ,g         1
   _IRQ0_IntHandler
-                                  fffe358f        11   func ,g         1
+                                  fffe356f        11   func ,g         1
   _IRQ1_IntHandler
-                                  fffe35a0         7   func ,g         1
+                                  fffe3580         7   func ,g         1
   _hex_to_char
-                                  fffe35a7        fa   func ,g         1
+                                  fffe3587        fa   func ,g         1
   _CMT3_IntHandler
-                                  fffe36a1       117   func ,g         1
+                                  fffe3681       117   func ,g         1
 FILE=.\src\sonar\sonar.obj
-                                  fffe37b8  fffe3842        8b
+                                  fffe3798  fffe3822        8b
   _Calculate_Height
-                                  fffe37b8        28   func ,g         1
+                                  fffe3798        28   func ,g         1
   _MTU5_IntHandler
-                                  fffe37e0        63   func ,g         1
+                                  fffe37c0        63   func ,g         1
 FILE=__initsct
-                                  fffe3843  fffe388c        4a
+                                  fffe3823  fffe386c        4a
   __INITSCT
-                                  fffe3843         0   none ,g         1
+                                  fffe3823         0   none ,g         1
   loop1
-                                  fffe3855         0   none ,l         1
+                                  fffe3835         0   none ,l         1
   next_loop1
-                                  fffe3863         0   none ,l         2
+                                  fffe3843         0   none ,l         2
   loop3
-                                  fffe3875         0   none ,l         1
+                                  fffe3855         0   none ,l         1
   next_loop3
-                                  fffe3886         0   none ,l         2
+                                  fffe3866         0   none ,l         2
 
 SECTION=EXCEPTVECT
 FILE=.\src\cg_src\r_cg_vecttbl.obj
