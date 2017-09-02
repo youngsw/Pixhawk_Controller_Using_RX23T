@@ -119,7 +119,7 @@ void fix_car(void)
     set_ppm(0,0,channel_percent(50),channel_val_MID,Alt_Hold,Emergency_OFF);
     start_PID_H = true;
 
-    delayms(1000);
+    delayms(1300);
     SET_FIX_GREEN;
     start_PID_Y = true;
 
@@ -128,16 +128,18 @@ void fix_car(void)
     while(sonar_height > 0.1)
     {
         set_ppm(0,0,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
-        if(sonar_height < 0.5)
+        if(sonar_height < 0.6)
         {
-            set_ppm(0,(channel_val_MID + channel_val_RANGE*8/100),0,0,Alt_Hold,Emergency_OFF);
+            set_ppm(0,(channel_val_MID - channel_val_RANGE*8/100),0,0,Alt_Hold,Emergency_OFF);
             break;
         }
     }
     start_PID_X = false;
     start_PID_Y = false;
+    while(sonar_height > 0.2)
+        set_ppm(0,0,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
     while(sonar_height > 0.1)
-        set_ppm(0,0,channel_percent(36),channel_val_MID,Alt_Hold,Emergency_OFF);
+        set_ppm(channel_val_MID,channel_val_MID,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
     disarm();
 }
 
@@ -166,16 +168,18 @@ void chase_car(void)
     set_ppm(0,0,channel_percent(50),channel_val_MID,Alt_Hold,Emergency_OFF);
     start_PID_H = true;
 
-    delayms(1000);
+    delayms(1300);
     SET_FIX_GREEN;
     start_PID_Y = true;
+
     while(!is_drop);
+    LEDB = LED_ON;
     delayms(6000);
     start_PID_H = false;
     while(sonar_height > 0.1)
     {
         set_ppm(0,0,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
-        if(sonar_height < 0.5)
+        if(sonar_height < 0.6)
         {
             set_ppm(0,(channel_val_MID + channel_val_RANGE*8/100),0,0,Alt_Hold,Emergency_OFF);
             break;
@@ -183,8 +187,10 @@ void chase_car(void)
     }
     start_PID_X = false;
     start_PID_Y = false;
+    while(sonar_height > 0.2)
+        set_ppm(0,0,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
     while(sonar_height > 0.1)
-        set_ppm(channel_val_MID,0,channel_percent(36),channel_val_MID,Alt_Hold,Emergency_OFF);
+        set_ppm(channel_val_MID,channel_val_MID,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
     disarm();
 }
 
@@ -228,7 +234,9 @@ void stunt(void)
     start_PID_X = false;
     start_PID_Y = false;
     while(sonar_height > 0.1)
-        set_ppm(channel_val_MID,0,channel_percent(36),channel_val_MID,Alt_Hold,Emergency_OFF);
+        set_ppm(channel_val_MID,0,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
+    while(sonar_height > 0.1)
+        set_ppm(channel_val_MID,channel_val_MID,channel_percent(35),channel_val_MID,Alt_Hold,Emergency_OFF);
     disarm();
 
 }
